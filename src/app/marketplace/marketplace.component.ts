@@ -14,7 +14,8 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 })
 export class MarketplaceComponent implements OnInit {
-  albums;
+  albums: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(public router: Router, private albumService: AlbumService) { }
 
